@@ -42,8 +42,15 @@
 }
 
 @keyframes splashAmbientGlow {
-  0% { transform: scale(0.85); opacity: 0.6; }
-  100% { transform: scale(1.15); opacity: 0.95; }
+  0% {
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1.15);
+    opacity: 0.95;
+  }
 }
 
 .splash-logo-container {
@@ -55,17 +62,6 @@
   justify-content: center;
 }
 
-.splash-logo-container::before {
-  content: '';
-  position: absolute;
-  width: 93%;
-  height: 93%;
-  border-radius: 50%;
-  background: #ffffff;
-  box-shadow: 0 0 25px rgba(255, 215, 100, 0.7), 0 0 50px rgba(255, 107, 0, 0.45);
-  z-index: 1;
-}
-
 @media (min-width: 768px) {
   .splash-logo-container {
     width: 440px;
@@ -74,8 +70,6 @@
 }
 
 .splash-logo-container svg {
-  position: relative;
-  z-index: 2;
   width: 100%;
   height: 100%;
   overflow: visible;
@@ -100,11 +94,13 @@
     transform: scale(0.65) translateY(25px);
     filter: drop-shadow(0 0 0 transparent);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.08) translateY(-4px);
     filter: drop-shadow(0 0 45px #FF6B00) drop-shadow(0 0 90px rgba(214, 71, 24, 0.85));
   }
+
   100% {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -127,11 +123,13 @@
     opacity: 0;
     transform: scale(0.85) rotate(-20deg);
   }
+
   60% {
     opacity: 1;
     transform: scale(1.03) rotate(2deg);
     filter: drop-shadow(0 0 35px rgba(255, 215, 0, 0.8));
   }
+
   100% {
     opacity: 1;
     transform: scale(1) rotate(0deg);
@@ -150,10 +148,12 @@
   0% {
     filter: drop-shadow(0 0 20px rgba(255, 180, 50, 0.5));
   }
+
   50% {
     filter: drop-shadow(0 0 70px rgba(255, 215, 0, 1)) drop-shadow(0 0 120px rgba(255, 107, 0, 0.9));
     transform: scale(1.05);
   }
+
   100% {
     filter: drop-shadow(0 0 30px rgba(255, 180, 50, 0.6));
     transform: scale(1);
@@ -178,7 +178,9 @@
 }
 
 @keyframes fadeInSubtitle {
-  to { opacity: 0.9; }
+  to {
+    opacity: 0.9;
+  }
 }
 
 /* Skip Button */
